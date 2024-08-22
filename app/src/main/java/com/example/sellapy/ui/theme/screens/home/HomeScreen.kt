@@ -39,12 +39,12 @@ fun HomeScreen(navController:NavController){
     Column (
         modifier = Modifier
             .fillMaxSize()
-            .background(Brown),
+            .background(PurpleGrey80),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
         Image(
-            painter = painterResource(id = R.drawable.product) ,
+            painter = painterResource(id = R.drawable.img) ,
             contentDescription = "product",
             modifier = Modifier.size(200.dp)
         )
