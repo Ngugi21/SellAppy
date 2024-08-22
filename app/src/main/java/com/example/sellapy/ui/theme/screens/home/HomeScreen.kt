@@ -25,6 +25,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.sellapy.R
+import com.example.sellapy.navigation.ROUT_DETAIL
+import com.example.sellapy.ui.theme.Brown
 import com.example.sellapy.ui.theme.Pink40
 import com.example.sellapy.ui.theme.Pink80
 import com.example.sellapy.ui.theme.PurpleGrey80
@@ -37,7 +39,7 @@ fun HomeScreen(navController:NavController){
     Column (
         modifier = Modifier
             .fillMaxSize()
-            .background(Pink40),
+            .background(Brown),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
@@ -59,7 +61,7 @@ fun HomeScreen(navController:NavController){
         Spacer(modifier = Modifier.height(15.dp))
 
         Button(
-            onClick = { /*TODO*/ },
+            onClick = { navController.navigate(ROUT_DETAIL) },
             colors = ButtonDefaults.buttonColors(Yellow)
         ) {
             Text(text = "Get Started")

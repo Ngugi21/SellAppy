@@ -7,6 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.sellapy.ui.theme.screens.about.AboutScreen
+import com.example.sellapy.ui.theme.screens.contact.ContactScreen
+import com.example.sellapy.ui.theme.screens.details.DetailsScreen
 import com.example.sellapy.ui.theme.screens.home.HomeScreen
 
 
@@ -28,6 +30,14 @@ fun AppNavHost(
 
         composable(ROUT_HOME) {
             HomeScreen(navController = navController)
+        }
+
+        composable(ROUT_DETAIL) {
+            DetailsScreen(navController = navController)
+        }
+
+        composable(ROUT_CONTACT) {
+            ContactScreen(navController = navController)
         }
     }
 }
