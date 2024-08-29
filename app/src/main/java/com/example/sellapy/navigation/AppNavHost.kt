@@ -11,6 +11,9 @@ import com.example.sellapy.ui.theme.screens.contact.ContactScreen
 import com.example.sellapy.ui.theme.screens.dashboard.DashboardScreen
 import com.example.sellapy.ui.theme.screens.details.DetailsScreen
 import com.example.sellapy.ui.theme.screens.home.HomeScreen
+import com.example.sellapy.ui.theme.screens.intent.IntentScreen
+import com.example.sellapy.ui.theme.screens.login.LoginScreen
+import com.example.sellapy.ui.theme.screens.signup.SignupScreen
 import com.example.sellapy.ui.theme.screens.splash.SplashScreen
 
 
@@ -18,7 +21,7 @@ import com.example.sellapy.ui.theme.screens.splash.SplashScreen
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination:String = ROUT_HOME
+    startDestination:String = ROUT_SPLASH
 ) {
     NavHost(
         navController = navController,
@@ -48,6 +51,15 @@ fun AppNavHost(
 
         composable(ROUT_SPLASH) {
             SplashScreen(navController = navController)
+        }
+        composable(ROUT_INTENT) {
+            IntentScreen(navController = navController)
+        }
+        composable(ROUT_SIGNUP) {
+            SignupScreen(navController = navController)
+        }
+        composable(ROUT_LOGIN) {
+            LoginScreen(navController = navController)
         }
     }
 }

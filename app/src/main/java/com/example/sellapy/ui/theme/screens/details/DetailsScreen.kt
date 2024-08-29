@@ -50,6 +50,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.sellapy.R
+import com.example.sellapy.navigation.ROUT_DETAIL
+import com.example.sellapy.navigation.ROUT_HOME
 import com.example.sellapy.ui.theme.Brown
 import com.example.sellapy.ui.theme.Yellow
 
@@ -71,7 +73,7 @@ fun DetailsScreen(navController: NavController){
                 IconButton(onClick = { /*TODO*/ }) {
                     Icon(imageVector = Icons.Default.Notifications, contentDescription = "notifications" , tint = Color.White)
                 }
-                IconButton(onClick = { /*TODO*/ }) {
+                IconButton(onClick = { navController.navigate(ROUT_HOME) }) {
                     Icon(imageVector = Icons.Default.ShoppingCart, contentDescription = "shopping cart" , tint = Color.White)
                 }
             }

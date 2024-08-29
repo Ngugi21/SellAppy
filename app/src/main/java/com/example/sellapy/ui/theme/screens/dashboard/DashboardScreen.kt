@@ -33,6 +33,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.sellapy.R
 import com.example.sellapy.navigation.ROUT_DETAIL
 import com.example.sellapy.navigation.ROUT_HOME
+import com.example.sellapy.navigation.ROUT_INTENT
 import com.example.sellapy.ui.theme.Brown
 import com.example.sellapy.ui.theme.Purple80
 import com.example.sellapy.ui.theme.PurpleGrey40
@@ -235,12 +236,13 @@ fun DashboardScreen(navController: NavController){
                             modifier = Modifier.fillMaxWidth(),
                             contentAlignment = Alignment.Center){
                             Image(
-                                painter = painterResource(id = R.drawable.login) ,
+                                painter = painterResource(id = R.drawable.img_2) ,
                                 contentDescription = "" ,
-                                modifier = Modifier.size(100.dp))
+                                modifier = Modifier.size(100.dp)
+                                    .clickable { navController.navigate(ROUT_INTENT) })
                         }
                         Text(
-                            text = "Login",
+                            text = "Intent",
                             modifier = Modifier.fillMaxWidth(),
                             textAlign = TextAlign.Center,
                             fontSize = 20.sp,
