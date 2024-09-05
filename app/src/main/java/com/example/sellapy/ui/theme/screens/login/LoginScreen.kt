@@ -42,7 +42,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.sellapy.R
 import com.example.sellapy.data.AuthViewModel
-import com.example.sellapy.navigation.ROUT_HOME
+import com.example.sellapy.navigation.ROUT_DASHBOARD
 import com.example.sellapy.ui.theme.Brown
 import com.example.sellapy.ui.theme.Yellow
 
@@ -130,7 +130,7 @@ Spacer(modifier = Modifier.width(10.dp))
             fontSize = 20.sp,
             fontFamily = FontFamily.SansSerif,
             color = Color.Black,
-            modifier = Modifier.clickable { navController.navigate(ROUT_HOME) }
+            modifier = Modifier.clickable { navController.navigate(ROUT_DASHBOARD) }
         )
     }
 
